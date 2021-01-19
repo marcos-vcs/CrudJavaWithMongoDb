@@ -1,7 +1,7 @@
 ### **`CRUD JAVA + MONGODB`**
 <hr>
 
-![9c8cdbb2bd7b637edd5b3a767b74153a](https://user-images.githubusercontent.com/37250628/105026518-60438d00-5a2d-11eb-811c-2755c81f3175.gif)
+<p align="center"><img src="https://user-images.githubusercontent.com/37250628/105026518-60438d00-5a2d-11eb-811c-2755c81f3175.gif" width="600" height="250"/>
 <br>
 <hr>
 <p>NESTE PROJETO USEI:
