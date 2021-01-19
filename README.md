@@ -1,7 +1,10 @@
-### `CRUD JAVA + MONGODB`
-![dormrm](https://user-images.githubusercontent.com/37250628/104961708-9c3b0b80-59b5-11eb-8b5d-8f1afc8ee71b.gif)
+<p> `CRUD JAVA + MONGODB`
+<hr>
 
-### _NESTE PROJETO USEI:_
+![9c8cdbb2bd7b637edd5b3a767b74153a](https://user-images.githubusercontent.com/37250628/105026518-60438d00-5a2d-11eb-811c-2755c81f3175.gif)
+<br>
+<hr>
+<p>NESTE PROJETO USEI:
 
 - > MONGODB VERSÃO 4.4.3
 - > IDE JAVA ECLIPSE
