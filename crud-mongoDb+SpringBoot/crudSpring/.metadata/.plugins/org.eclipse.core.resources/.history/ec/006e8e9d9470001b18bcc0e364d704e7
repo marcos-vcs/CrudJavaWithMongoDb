@@ -1,0 +1,13 @@
+package com.java.spring.mongo.api.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+import com.java.spring.mongo.api.repository.BookRepository;
+
+@RestController
+public class BookController {
+	
+	@Autowired
+	private BookRepository repository;
+	
+}

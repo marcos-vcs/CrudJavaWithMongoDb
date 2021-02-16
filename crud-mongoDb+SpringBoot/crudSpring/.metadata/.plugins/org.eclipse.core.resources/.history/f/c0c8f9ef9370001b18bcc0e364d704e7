@@ -1,0 +1,7 @@
+package com.java.spring.mongo.api.repository;
+
+public interface BookRepository {
+
+	
+	
+}

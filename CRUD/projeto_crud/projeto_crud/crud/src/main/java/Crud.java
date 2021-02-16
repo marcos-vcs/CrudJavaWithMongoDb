@@ -19,14 +19,12 @@ public class Crud {
 
 	Scanner input = new Scanner(System.in);
 
-	// conex�o com o banco de dados mongo atlas
+	// conexao com o banco de dados mongo atlas
 	MongoClientURI uri = new MongoClientURI(
 			"mongodb://marcos:6janeiro2002@cluster0-shard-00-00.ujgj3.mongodb.net:27017,cluster0-shard-00-01.ujgj3.mongodb.net:27017,cluster0-shard-00-02.ujgj3.mongodb.net:27017/escola?ssl=true&replicaSet=atlas-d72rzx-shard-0&authSource=admin&retryWrites=true&w=majority");
-	MongoClient cliente = new MongoClient(uri);// conecta no banco localhost
-	MongoDatabase bancoDeDados = cliente.getDatabase("escola");// definimos nosso database como sendo escola
-	MongoCollection<org.bson.Document> alunos = bancoDeDados.getCollection("alunos");// colocamos a collection alunos
-																						// dentro da variavel alunos
-
+	MongoClient cliente = new MongoClient(uri);
+	MongoDatabase bancoDeDados = cliente.getDatabase("escola");
+	MongoCollection<org.bson.Document> alunos = bancoDeDados.getCollection("alunos");
 	public void create(String nome, String id, String aniversario, String sala, String nivelEscolar, int serie)
 			throws IOException {
 
@@ -53,12 +51,10 @@ public class Crud {
 
 		try {
 			while (cursor.hasNext()) {
-				String cursorString = cursor.next().toString();// conversaoo de Document para string
-				String[] cursorSeparado = cursorString.split(",");// sempre que a função achar uma virgula ela vai
-																	// quebrar a string e separar ela em uma nova casa
-																	// do array
-				cursorSeparado[5] = cursorSeparado[5].substring(0, 11);// isso apagar as chaves da resposta do banco de
-																		// dados.
+				String cursorString = cursor.next().toString();
+				String[] cursorSeparado = cursorString.split(",");
+																	
+				cursorSeparado[5] = cursorSeparado[5].substring(0, 11);
 				cursorSeparado[0] = cursorSeparado[0].substring(11, 18);
 
 				// replaceAll troca um caracter por outro como = por :
