@@ -1,8 +1,0 @@
-package com.java.spring.mongo.api.resource;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class BookController {
-
-}

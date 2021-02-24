@@ -1,5 +1,0 @@
-package com.java.spring.mongo.api.resource;
-
-public class BookController {
-
-}
