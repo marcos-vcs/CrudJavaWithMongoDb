@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<style type="text/css">
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #435d7d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424952;
+}
+body {
+	zoom:0.8;
+	color: #566787;
+	background: #ebf1ff;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.table-responsive {
+	margin: 30px 0;
+	font-size:16px;
+	
+}
+
+.table-title {
+	padding-bottom: 15px;
+	background: #435d7d;
+	color: #fff;
+	padding: 16px 50px;
+}
+
+.table-title h2 {
+	margin: 5px 0 0;
+	font-size: 37px;
+}
+
+.table-title .btn-group {
+	float: right;
+}
+
+.table-title .btn {
+	color: #fff;
+	float: right;
+	font-size: 15px;
+	border: none;
+	min-width: 20px;
+	border: none;
+	outline: none !important;
+}
+
+.table-title .btn i {
+	float: left;
+	font-size: 21px;
+	margin-right: 5px;
+}
+
+table.table td a:hover {
+	color: #2196F3;
+}
+
+table.table td a.edit {
+	color: #FFC107;
+	padding-right: 10px;
+}
+
+table.table td a.delete {
+	color: #F44336;
+}
+
+
+
+</style>
+
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+<meta charset="UTF-8">
+<title>Stock Cars</title>
+</head>
+<body>
+
+	<div class="container col-md-12">
+		
+			<div class="table-wrapper">
+			<div class="fixed-top">
+
+				<div class="table-title">
+					<div class="row">
+
+						<div class="col">
+							<h2>Stock Cars</h2>
+						</div>
+
+						<div class="col">
+							<a href="new" class="btn btn-success"><i
+								class="material-icons">&#xE147;</i> <span>Criar novo carro</span></a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+				<div class="table-responsive p-3" style="margin-top: 80px;">
+				<table class="table table-hover">
+
+					<thead class="thead-dark">
+
+						<tr>
+							<th class="text-center" scope="col">Id</th>
+							<th class="text-center" scope="col">Marca</th>
+							<th class="text-center" scope="col">Modelo</th>
+							<th class="text-center" scope="col">Versão</th>
+							<th class="text-center" scope="col">Cor</th>
+							<th class="text-center" scope="col">Combustível</th>
+							<th class="text-center" scope="col">Câmbio</th>
+							<th class="text-center" scope="col">Opcionais</th>
+							<th class="text-center" scope="col">Ano Fabric.</th>
+							<th class="text-center" scope="col">Ano Modelo</th>
+							<th class="text-center" scope="col">KM rodado</th>
+							<th class="text-center" scope="col">Placa</th>
+							<th class="text-center" scope="col">Carroceria</th>
+							<th class="text-center" scope="col">Nº portas</th>
+							<th class="text-center" scope="col">Qtd donos</th>
+							<th class="text-center" scope="col">Valor</th>
+							<th class="text-center" scope="col">Observação</th>
+							<th class="text-center" scope="col">Alterações</th>
+						</tr>
+
+					</thead>
+					<tbody>
+
+						<tr th:each="product : ${listProducts}">
+							<td class="font-weight-bold text-center" scope="row" th:text="${product.id}">Carro Id</td>
+							<td class="text-center" th:text="${product.marca}">Marca</td>
+							<td class="text-center" th:text="${product.modelo}">Modelo</td>
+							<td class="text-center" th:text="${product.versao}">Versão</td>
+							<td class="text-center" th:text="${product.cor}">Cor</td>
+							<td class="text-center" th:text="${product.combustivel}">Combustível</td>
+							<td class="text-center" th:text="${product.cambio}">Câmbio</td>
+							<td class="text-center" th:text="${product.opcionais}">Opcionais</td>
+							<td class="text-center" th:text="${product.anoConstruido}">Ano Fabric.</td>
+							<td class="text-center" th:text="${product.anoDesenvolvido}">Ano Modelo</td>
+							<td class="text-center" th:text="${product.qtdKm}">KM rodado</td>
+							<td class="text-center" th:text="${product.placa}">Placa</td>
+							<td class="text-center" th:text="${product.carroceria}">Carroceria</td>
+							<td class="text-center" th:text="${product.numPortas}">Nº portas</td>
+							<td class="text-center" th:text="${product.qtdDonos}">Qtd donos</td>
+							<td class="text-center" th:text="${product.valor}">Valor</td>
+							<td class="text-center" th:text="${product.observacao}">Observação</td>
+
+							<td class="text-center">
+																	
+								<a th:href="@{'/edit/' + ${product.id}}" class="edit">
+								<i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+								
+								<a class="delete" href="" data-toggle="modal" data-target="#modalExcluir">
+								<i class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872;</i></a>
+								
+									
+								
+						
+											<!-- Modal -->
+								<div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  									<div class="modal-dialog modal-dialog-centered" role="document">
+    									<div class="modal-content">
+									      <div class="modal-header">
+									      
+									        	<h5 class="modal-title" id="exampleModalCenterTitle">Você realmente deseja excluir?</h5>
+									        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+									        
+									        </div>
+      										<div class="modal-body">
+      										
+       							 				<p>Esta ação é irreversível!</p>
+        
+      										</div>
+      										<div class="modal-footer">
+      										
+        										<button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+       											<a th:href="@{'/delete/' + ${product.id}}" class="delete"> <button type="button" class="btn btn-danger">Excluir</button></a>
+       
+      										</div>
+    								</div>
+ 	 							</div>
+							</div>
+							
+						
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			
+		</div>
+	</div>
+
+</body>
+</html>

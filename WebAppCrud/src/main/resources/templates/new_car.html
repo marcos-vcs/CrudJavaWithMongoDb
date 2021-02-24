@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	
+	<style type="text/css">
+	
+	/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #435d7d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424952;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #435d7d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424952;
+}
+
+body {
+	color: #566787;
+	background: #dae6e5;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 13px;
+}
+	
+	
+	</style>
+
+
+	<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+	<link rel="stylesheet"href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<meta charset="UTF-8">
+	<title>Criar novo carro</title>
+</head>
+<body>
+	<div class="container col-md-6 p-3">
+							
+						
+		<form action="#" th:action="@{/save}" th:object="${modelo}" method="post" style="margin-bottom: 50px;">
+			<h2 align="center">Cadastrar Novo Carro</h2>
+		
+			<div class="form-group">
+					Informe o ID:
+					<input type="number" class="form-control" th:field="*{id}" required="required" />
+			</div>
+			<div class="form-group">
+					Informe a Marca:
+					<input type="text" class="form-control" th:field="*{marca}" required="required"/>
+			</div>
+			<div class="form-group">
+					Informe o Modelo:
+					<input type="text" class="form-control" th:field="*{modelo}" required="required"/>
+		    </div>
+		    <div class="form-group">
+					Informe o Versão:
+					<input type="text" class="form-control" th:field="*{versao}" required="required"/>
+			</div>
+			<div class="form-group">
+					Informe o Cor:
+					<input type="text" class="form-control"  th:field="*{cor}" required="required"/>
+			</div>
+			<div class="form-group">
+					Informe o Combustível:
+					<select class="form-control" th:field="*{combustivel}" required="required"/>
+						<option>Gasolina</option>
+  						<option>Alcool</option>
+  						<option>Flex</option>
+  						<option>Elétrico</option>
+					</select>				
+			</div>
+			<div class="form-group">
+				
+					Informe o tipo de cambio:
+					<select class="form-control" th:field="*{cambio}" required="required"/>
+					<option>Automático</option>
+  						<option>Semi-Automático</option>
+  						<option>Mecânico</option>
+					</select>
+			</div>
+			<div class="form-group">
+					Informe os opcionais:
+					<input type="text" class="form-control" th:field="*{opcionais}" required="required"/>
+			</div>
+			<div class="form-group">
+					Informe o ano de fabricação:
+					<input type="number" class="form-control" th:field="*{anoConstruido}" required="required"/>
+			</div>	
+			<div class="form-group">
+					Informe o Ano de Desenvolvimento:
+					<input type="number" class="form-control" th:field="*{anoDesenvolvido}" required="required"/>
+			</div>
+			<div class="form-group">
+					Informe Quantidade de KM rodados:
+					<input type="text" class="form-control" th:field="*{qtdKm}" required="required"/>
+			</div>
+			<div class="form-group">
+					Informe a placa:
+					<input type="text" class="form-control" th:field="*{placa}" required="required"/>
+			</div>	
+			<div class="form-group">
+					Tem carroceria?:
+					<select type="text" class="form-control" th:field="*{carroceria}" required="required"/>
+						<option>Não</option>
+  						<option>Sim</option>
+					</select>
+			</div>
+			<div class="form-group">
+				
+					Informe a Quantidade de portas:
+					<input type="number" class="form-control" th:field="*{numPortas}" required="required"/>
+			</div>		
+			<div class="form-group">
+					Informe Quantidade de Donos:
+					<input type="number" class="form-control" th:field="*{qtdDonos}" required="required"/>
+			</div>	
+			<div class="form-group">
+					Informe o Valor:
+					<input type="number" class="form-control" th:field="*{valor}" required="required"/>
+			</div>
+			<div class="form-group">
+					Observação:
+					<input type="text" class="form-control" th:field="*{observacao}" required="required"/>
+			</div>	
+			<div class="form-group">
+				
+				<div align="center">
+					<input type="submit" class="btn btn-success" value="Salvar">
+					<input type="reset" class="btn btn-danger"  value="Resetar">
+					<a th:href="@{/}"><button type="button" class="btn btn-primary">Voltar</button></a>
+				</div>		
+			</div>	
+			
+		</form>
+		
+	</div>
+</body>
+</html>
