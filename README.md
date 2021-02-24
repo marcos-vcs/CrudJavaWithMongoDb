@@ -15,7 +15,7 @@
 - > HTML5
 - > MAVEN
 - > HEROKU
-
+<hr>
 <h3>LINK PARA A DEMONSTRAÇÃO PRÁTICA
 https://stock-cars.herokuapp.com/
 
@@ -27,4 +27,4 @@ https://stock-cars.herokuapp.com/
 - > IDE JAVA ECLIPSE
 - > APACHE MAVEN
 <hr>
-**`PROJETO ABERTO A SUGESTÕES E CONTRIBUIÇÕES!`**
+<h4>PROJETO ABERTO A SUGESTÕES E CONTRIBUIÇÕES!
