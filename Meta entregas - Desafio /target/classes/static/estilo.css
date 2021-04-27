@@ -1,0 +1,33 @@
+@charset "UTF-8";
+#rodape{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#caixa{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+img{
+	display: block;
+ 	margin: 5px auto;
+  	max-width: 100%;
+}
+h1{
+	text-align: center;
+}
+::-webkit-scrollbar {
+  	width: 10px;
+}
+	/* Track */
+::-webkit-scrollbar-track {
+  	background: #f1f1f1;
+}
+	/* Handle */
+::-webkit-scrollbar-thumb {
+  	background: #435d7d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  	background: #0070ff;
